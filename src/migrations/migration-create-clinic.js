@@ -11,7 +11,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      statusId: {
+      name: {
+        type: Sequelize.STRING
+      },
+      address: {
         type: Sequelize.STRING
       },
       description: {
@@ -20,6 +23,7 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
+      
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

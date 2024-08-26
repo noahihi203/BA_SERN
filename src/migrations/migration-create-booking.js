@@ -11,7 +11,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      address: {
+      statusId: {
         type: Sequelize.STRING
       },
       doctorId: {
