@@ -12,7 +12,7 @@ module.exports = {
       gender: '1',
       typeRole: 'ROLE',
       keyRole: 'R1',
-    }])
+    }]) 
 
   },
 
