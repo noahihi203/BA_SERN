@@ -84,7 +84,7 @@ let updateUserData = (data) => {
                 await user.save();
                 let allUsers = await db.User.findAll();
                 resolve(allUsers);
-            } else { 
+            } else {
                 resolve();
             }
         } catch (e) {
@@ -94,16 +94,17 @@ let updateUserData = (data) => {
 }
 
 let deleteUserById = (userId) => {
-    return new Promise(async(resolve, reject) => {
-        try{
+    return new Promise(async (resolve, reject) => {
+        try {
             let user = await db.User.findOne({
-                where: {id: userId}
+                where: { id: userId },
+                raw: false
             })
-            if(user) {
+            if (user) {
                 await user.destroy();
             }
             resolve();
-        }catch(e){
+        } catch (e) {
             reject(e);
         }
     })
